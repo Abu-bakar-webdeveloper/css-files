@@ -96,18 +96,18 @@ body {
   margin-bottom: 60px;
   text-align: left;
 
-  h1{
+  h1 {
     font-weight: bold;
   }
 
-  p{
+  p {
     width: 530px;
     margin-top: 15px;
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
-  .herobutton{
+  .herobutton {
     display: inline-block;
     padding: 8px 20px;
     background-color: $primary-color;
@@ -130,7 +130,7 @@ body {
   align-items: center;
   text-align: center;
   margin: 30px auto;
-  max-width: 1200px;
+  max-width: 80%;
   padding: 0 20px;
   gap: 40px;
 
@@ -151,16 +151,15 @@ body {
   }
 
   .features-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .card {
     position: relative;
-    height: 220px;
-    width: 250px;
+    // height: 220px;
+    max-width: 350px;
     background-color: $primary-color;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -181,9 +180,9 @@ body {
       align-items: center;
       border-radius: 50%;
       background-color: #fff;
-      border: 1px solid #252d41;
+      border: 1px solid #a19898;
       font-size: 1.5rem;
-      color: $primary-color;
+      color: #666;
     }
 
     .card-content {
@@ -356,7 +355,7 @@ body {
     .newscard {
       display: flex;
       width: 100%;
-      max-width: 500px;
+      max-width: 550px;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border-radius: 2px;
@@ -374,7 +373,7 @@ body {
         justify-content: space-between;
         text-align: start;
 
-        .itemicon{
+        .itemicon {
           display: flex;
           gap: 10px;
         }
@@ -407,7 +406,6 @@ body {
   }
 }
 
-
 #faculties {
   display: flex;
   flex-direction: column;
@@ -432,11 +430,13 @@ body {
     }
   }
 
-  .faculties-cards{
-    display: flex;
-    gap: 12px;
+  .faculties-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
 
-    .facultiescard{
+    
+    .facultiescard {
       width: 200px;
 
       img {
@@ -445,7 +445,7 @@ body {
         object-fit: cover;
       }
 
-      .facultiescard-content{
+      .facultiescard-content {
         background-color: $secondary-color;
 
         h3 {
@@ -454,16 +454,13 @@ body {
           color: #f0f0f0;
         }
 
-        p{
+        p {
           text-align: start;
           padding-left: 7px;
           color: #f0f0f0;
         }
-    }
-
-     
       }
-    
+    }
   }
 }
 
@@ -549,7 +546,7 @@ body {
 
   .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -572,4 +569,174 @@ body {
   }
 }
 
+// responsive design
 
+@media screen and (width < 750px) {
+  #contact {
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin: 0px;
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding-left: 0;
+    }
+    .button {
+      margin: 0;
+    }
+  }
+
+  #heroSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      text-align: center;
+      width: 300px;
+      margin-left: 0px;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  #keyfeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 80%;
+    padding: 0 20px;
+    gap: 40px;
+
+
+      .features-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+      }
+  }
+
+  #courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 20px;
+    }
+  }
+
+  .features-container {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  #faculties{
+    .faculties-cards {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (750px < width < 1096px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin: 0px;
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding-left: 0;
+    }
+    .button {
+      margin: 0;
+    }
+  }
+
+  
+  #keyfeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 80%;
+    padding: 0 20px;
+    gap: 40px;
+
+
+      .features-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+
+        .card{
+          margin-bottom: 20px;
+        }
+      }
+  }
+
+  #courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+  }
+
+  #faculties{
+    .faculties-cards {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 15px;
+    }
+  }
+}
