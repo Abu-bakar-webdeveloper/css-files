@@ -1,0 +1,16 @@
+.blur-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url("../jane-last-k60YOEjB75k-unsplash.jpg") center/cover no-repeat;
+    height: 85vh;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+}
